@@ -2,13 +2,9 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-plt.rcParams['font.sans-serif'] = ['KaiTi'] # Укажите шрифт по умолчанию
-plt.rcParams['axes.unicode_minus'] = False # Решить проблему, что знак минус '-' отображается в виде квадрата на сохраненном изображении
-
 img_gray0 = cv2.imread("lab_1\\bird2.jpg", cv2.IMREAD_GRAYSCALE)
 img_gray0 = 255 - img_gray0
 h, w= img_gray0.shape
-
 
 plt.figure()
 plt.imshow(img_gray0, vmin=0, vmax=255, cmap=plt.get_cmap("Greys"))
